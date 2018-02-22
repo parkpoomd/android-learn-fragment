@@ -4,35 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context="com.example.deer.learnfragment.MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Activity" />
-
-        <Button
-            android:id="@+id/btn_add_fragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Add Fragment" />
-
-        <Button
-            android:id="@+id/btn_remove_fragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Remove Fragment" />
-
-    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/layout_fragment_container"
@@ -40,5 +13,31 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#d9e1ea" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One" />
+
+        <Button
+            android:id="@+id/btn_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Two" />
+
+        <Button
+            android:id="@+id/btn_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Three" />
+
+    </LinearLayout>
 
 </LinearLayout>
