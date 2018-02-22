@@ -6,8 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,15 +22,6 @@ public class ThreeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_three, container, false);
-
-        Button btnClose = (Button) rootView.findViewById(R.id.btn_close);
-        btnClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager().popBackStack();
-            }
-        });
-
         return rootView;
     }
 
