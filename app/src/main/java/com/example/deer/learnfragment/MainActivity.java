@@ -1,8 +1,10 @@
 package com.example.deer.learnfragment;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -35,5 +37,24 @@ public class MainActivity extends AppCompatActivity {
                 mPager.setCurrentItem(mPager.getCurrentItem() - 1);
             }
         });
+
+        Button btnRequest = (Button) findViewById(R.id.btn_request);
+        btnRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = getActiveFragment(mPager, 2);
+                ThreeFragment threeFragment = (ThreeFragment) fragment;
+
+                if (threeFragment != null) {
+                    String message = threeFragment.getMyText();
+                    Log.i("Check", message);
+                }
+            }
+        });
+    }
+
+    public Fragment getActiveFragment(ViewPager container, int position) {
+        String name = "android:switcher:" + container.getId() + ":" + position;
+        return getSupportFragmentManager().findFragmentByTag(name);
     }
 }
